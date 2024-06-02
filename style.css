@@ -185,7 +185,7 @@ span{
     background-image: url(./images/waterflow.avif);
     
 }
-#target {
+.target {
     width: 100vw; /* Full viewport width */
     position: relative;
     left: 50%;
