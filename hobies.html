@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<head>
+    <title>Flexbox Pricing Table</title>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Nunito:ital,wght@0,200..1000;1,200..1000&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Lato:wght@400&display=swap" rel="stylesheet">
+    <style>
+        .title h1{
+            color:aliceblue;
+        }
+    </style>
+</head>
+<body>
+    <div class="animated-bg"></div>
+    <div class="content">
+        <div class="header sticky-header">
+            <p></p>
+            <div class="nav-links">
+                <a href="./index">Home</a>
+                <a href="./olympiads">Olympiads</a>
+                <a href="./hobies">About</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
+        <div class="title title-about">
+            <h1 >About</h1>
+        </div>
+        <div class="container flex ">
+
+            <div id="content-grid" class="container flex">
+                <div class="card">
+                    <h1 class="horizontal">I'm Arbër, a student in Tirana</h1>
+                    <p class="main-text" >As a student in Tirana, I have a deep passion for projects that involve math and design. I enjoy working on operations that bring order to complexity, driven by my enthusiasm for solving intricate problems and constantly seeking new challenges.<br><br>When I'm not programming, you can find me playing chess or drawing. Chess sharpens my strategic thinking, while drawing allows me to express my creativity. Both hobbies complement my academic interests and contribute to my growth as a problem-solver and thinker.</p>
+                    <div class="flex" style="margin-left: 10%;">
+                        <h2>What I like</h2>
+                        <a href="https://www.chess.com/member/arber-zr">Chess</a>
+                        <a href="">Drawing</a>
+                        <a href="">Football</a>
+                        <a href="">House Music</a>
+                        <br>
+                        <h2>What I'm learning</h2>
+                        <a href="">Computer Science</a>
+                        <a href="">Chess</a>
+                    </div>
+                </div>
+            </div>
+            <br><br><br><hr>
+            <div class="flex footer">
+                <h1>Contact</h1>
+                <br><br>
+                <div>
+                    <a href="">LinkedIn</a>
+                    <a href="https://www.instagram.com/arber.zerani/">Instagram</a>
+                    <a href="">GitHub</a>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script>
+        function toggleMenu() {
+        var x = document.querySelector(".nav-links");
+        var button = document.querySelector(".menu-toggle");
+        if (x.style.display === "flex") {
+            x.classList.remove("active"); 
+            setTimeout(function() {
+                x.style.display = "none"; 
+            }, 500); 
+            button.classList.remove("active"); 
+        } else {
+            x.style.display = "flex";
+            setTimeout(function() {
+                x.classList.add("active");
+            }, 100); 
+            button.classList.add("active"); 
+        }
+        }
+        </script>
+</body>

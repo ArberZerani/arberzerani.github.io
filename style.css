@@ -1,0 +1,389 @@
+
+body,html{
+    margin: 0;
+  padding: 0;
+  height: 100%;
+}
+body{
+    color: #222;
+}
+body::-webkit-scrollbar {
+    width: 0;  /* Remove scrollbar width */
+    height: 0; /* Remove scrollbar height */
+}
+a{
+    color: #222;
+    text-decoration: none;
+    font-family: 'Lato', sans-serif;
+    transition: opacity .2s;
+    background-color: rgba(0, 0, 0, 0);
+    padding: 0 1rem 0 1rem;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+}
+
+a:hover {
+    text-decoration: underline; 
+}
+h1{
+    letter-spacing: 0;
+    margin-top: 20px;
+    margin-bottom: 15px;
+    font-family: 'Montserrat', sans-serif;
+    font-size: 54px;
+    font-weight: 400;
+    line-height: 68px;
+}
+h2{
+    font-family: 'Montserrat', sans-serif;
+    line-height: 68px;
+    margin-top: 0px;
+    margin-bottom: 0px;
+}
+p{
+    max-width: 740px;
+    opacity: 1;
+    margin-bottom: 10px;
+    font-family: 'Roboto', sans-serif;
+    font-size: 18px;
+    font-weight: 300;
+    line-height: 28px;
+}
+
+hr {
+    border: none; 
+    height: 2px; 
+    background-color: #333; 
+    margin: 20px 0; 
+}
+span{
+    font-weight: 750;
+}
+
+#content-grid{
+    margin: 0px 0px 0px 0px;
+}
+.container{
+    width: auto;
+    margin: 0px 10% 0px 10%;
+}
+.header{
+    display: flex;
+    margin: 1rem 2rem 1rem 2rem;
+    justify-content: space-between;
+}
+.header-link{
+    display: flex;
+    align-items: center;
+    font-size: 18px;
+    font-weight: 600;
+    line-height: 28px;
+    
+}
+.sticky-header {
+    position: fixed;
+    top: 0;
+    right: 0;
+    left: auto;
+    width: 100%;
+    z-index: 1000;
+    padding: 10px 20px;
+}
+
+.flex{
+    display: flex;
+    flex-direction: column;
+}
+
+.flex-center{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.main-grid{
+    display:grid;
+    width: 100%;
+    height: 400px;
+    grid-template-columns: 60% 40%;
+    grid-template-rows: 50% 50%;
+}
+.main-photo{
+    border-radius: 50%;
+    place-self: center;
+    border: 10px solid #fff; /* Example border styling */
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+.card{
+    display: grid;
+    width: 100%;
+    height: auto;
+    margin-top: 10%;
+    margin-bottom: 10%;
+    grid-template-columns: 50% 50%;
+    grid-template-rows: 40% 60%;
+}
+.card-video {
+    margin-top: 7%;
+    margin-left: 20%;
+    width: 80%;
+    height: 90%;
+    border: 2px solid #ccc;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: border-color 0.3s, box-shadow 0.3s;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.card-video:hover {
+    border-color: #555;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+.vertikal-djathtas{
+    grid-column: 2 / 3;
+    grid-row: 1 / 3; 
+}
+
+.horizontal{
+    grid-column: 1 / 3;
+    grid-row: 1 / 2; 
+    place-self: center;
+}
+.background {
+    width: 100%;
+    background-image: url('./images/depositphotos_34267325-stock-illustration-seamless-pattern-with-green-leaves.jpg'); /* Replace with your image path */
+    background-size: cover; /* Cover the entire div */
+    background-position: center; /* Center the image */
+    background-repeat: no-repeat; /* Prevent image from repeating */
+}
+.footer{
+    width: 100%;
+    height: 300px;
+    justify-content: center;
+}
+.footer>* {
+    place-self: center;
+}
+.title{
+    width: 100%;
+    height: 400px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-size: cover; 
+    background-position: center;
+    background-repeat: no-repeat;
+}
+.title-project{
+    background-image: url('./images/watercolor-manhattan-at-midnight-elisabeth-lucas.jpg');
+}
+.title-olympiad{
+    background-image: url(./images/paint-a-watercolor-landscape-of-a-mountain-range-with-snow-capped-peaks-featuring-a-vibrant-sunset-sky-and-intricate-details-of-rocks-and-trees-generate-ai-free-photo.jpg);
+}
+.title-about{
+    background-image: url(./images/waterflow.avif);
+    
+}
+
+.nav-links {
+    display: flex;
+    flex-direction: row;
+}
+
+
+.menu-toggle {
+    display: none;
+    position: relative;
+    z-index: 10000; /* Ensure the button is above other elements */
+    border: none;
+    cursor: pointer;
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #333; /* Button text color */
+    background-color: #fff; /* Button background color */
+    border-radius: 5px; /* Rounded corners */
+    box-shadow: 0px 2px 4px rgba(0, 0, 0, 0.1); /* Optional shadow for depth */
+    transition: background-color 0.3s ease;
+}
+
+
+.animated-bg {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background: linear-gradient(135deg, #F7E2D1,#f1cbc7, #A6CEE3 , white); 
+    background-size: 400% 400%; 
+    animation: gradientAnimation 15s ease infinite; 
+  }
+  .gradient-bg {
+    background: radial-gradient(circle, #faacac, #ffcbcb, white);
+    background-size: 200% 200%;
+    animation: h1GradientAnimation 10s ease infinite;
+    color: #222;
+    width: 100%;
+    padding: 20px;
+    border-radius: 10px; /* Optional: Add rounded corners */
+    text-align: center;
+   }
+  
+  .content {
+    position: relative;
+    z-index: 1; 
+    padding: 20px;
+    color: #222; 
+    font-family: Arial, sans-serif;
+  }
+
+  
+  @keyframes gradientAnimation {
+    0% {
+      background-position: 0% 50%;
+    }
+    50% {
+      background-position: 100% 50%;
+    }
+    100% {
+      background-position: 0% 50%;
+    }
+  }
+
+  @keyframes h1GradientAnimation {
+    0% {
+        background-position: 50% 0%;
+    }
+    50% {
+        background-position: 50% 100%;
+    }
+    100% {
+        background-position: 50% 0%;
+    }
+}
+@keyframes slideLeft {
+    from {
+        transform: translateX(100%);
+    }
+    to {
+        transform: translateX(0);
+    }
+}
+  @media (max-width: 1440px) {
+    .main-grid{
+        height: 370px;
+    }
+  }
+  @media (max-width: 1230px) {
+    h1{
+        font-size: 34px;
+        font-weight: 400;
+        line-height: 40px;
+    }
+    .main-title{
+        font-size: 44px;
+        font-weight: 400;
+        line-height: 60px;
+    }
+    .main-grid{
+        height: 307px;
+    }
+  }
+  @media (max-width: 1100px) {
+    h1{
+        font-size: 28px;
+        font-weight: 400;
+        line-height: 32px;
+    }
+    .main-title{
+        font-size: 36px;
+        line-height: 44px;
+    }
+    p{
+        font-size: 14px;
+        line-height: 26px;
+    }
+    .main-grid{
+        height: 268px;
+    }
+  }
+  @media (max-width: 790px) {
+    .main-title{
+        font-size: 28px;
+        line-height: 34px;
+    }
+    .main-grid{
+        height: 268px;
+    }
+    p{
+        margin-top: 7%;
+    }
+    .card{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        flex-direction: column;
+    }
+    .card-video{
+        margin-left: 0%;
+        width: 100%;
+    }
+    #resize-img{
+        grid-column: 2 / 3;
+        grid-row: 1 / 2;
+        width: 60%;
+    }
+    #resize-text{
+        grid-column: 1 / 3;
+        grid-row: 2 / 3;   
+    }
+    .menu-toggle {
+        display: block;
+    }
+
+    .nav-links {
+        display: none;
+        position: fixed;
+        top: 0;
+        right: 0;
+        height: 100%;
+        background-color: white;
+        z-index: 9999;
+        animation: slideLeft 0.5s ease; /* Use animation shorthand */
+        overflow-y: auto;
+        padding: 20px;
+        text-align: center;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+        padding-top: 30px;
+        transition: opacity 0.3s ease; /* Smooth transition for opacity */
+        opacity: 0; /* Initially hidden */
+    }
+    
+    .nav-links.active {
+        display: flex;
+        width: calc(100% - 40px);
+        opacity: 1; /* Show with opacity transition */
+    }
+    
+    .menu-toggle.active {
+        display: block; /* Ensure the button remains visible */
+    }
+  }
+  @media (max-width: 480px) {
+    .main-grid{
+        width: 100%;
+        height: 400px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        align-items: center;
+    }
+    #resize-img{
+        width: 40%;
+    }
+  }
+
+  
+  
+  
