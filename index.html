@@ -18,8 +18,8 @@
         <div class="header sticky-header">
             <p></p>
             <div class="nav-links">
-                <a href="#target-project">Projects</a>
-                <a href="#target-olympiad">Olympiads</a>
+                <a href="#target-project" id="scroll-link">Projects</a>
+                <a href="#target-olympiad" id="scroll-link">Olympiads</a>
                 <a href="./hobies">About</a>
             </div>
             <button class="menu-toggle" onclick="toggleMenu()">☰</button>
@@ -89,5 +89,25 @@
             button.classList.add("active"); 
         }
         }
+        document.querySelectorAll('.scroll-link').forEach(link => {
+            link.addEventListener('click', function(e) {
+                e.preventDefault();
+                const targetId = this.getAttribute('href').substring(1);
+                document.getElementById(targetId).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+        document.addEventListener("DOMContentLoaded", function() {
+            const hash = window.location.hash;
+            if (hash) {
+                const targetElement = document.querySelector(hash);
+                if (targetElement) {
+                    targetElement.scrollIntoView({
+                        behavior: 'smooth'
+                    });
+                }
+            }
+        });
         </script>
 </body>
