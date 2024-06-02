@@ -1,9 +1,8 @@
 <!DOCTYPE html>
 <head>
-    <title>Arber Zerani</title>
+    <title>Flexbox Pricing Table</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="./style.css">
-    <meta name="google-site-verification" content="HmeE7tsw8XSIbv8QFMSJGTrrq9hnJfQpmsJ-h3t8kXo" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -16,6 +15,15 @@
 <body>
     <div class="animated-bg"></div>
     <div class="content">
+        <div class="header sticky-header">
+            <p></p>
+            <div class="nav-links">
+                <a href="#target-project">Projects</a>
+                <a href="#target-olympiad">Olympiads</a>
+                <a href="./hobies">About</a>
+            </div>
+            <button class="menu-toggle" onclick="toggleMenu()">☰</button>
+        </div>
         <div class="container flex ">
             <br><br><br>
             <div class="main-grid">
@@ -23,14 +31,63 @@
                 <img src="./images/pic1.jpg" id="resize-img" class="vertikal-djathtas main-photo" width="75%" >
                 <p id="resize-text" class="main-text">I am a high school student with a keen interest in the computer world. I work with passion and concentration, always eager to learn and explore new technologies. My dedication drives me to continuously improve and expand my skills.</p> 
             </div>
-            <br><br>
-            <div class="head-link gradient-bg">
-                <a href="./projects" >Projects</a>
-                <a href="./olympiads" >Olympiads</a>
-                <a href="./hobies" >About</a>
+            <br><br><br><br>
+            <div id="target-project" class="title title-project">
+                <h1>Projects</h1>
             </div>
-        
-           
+            <div id="content-grid" class="container flex">
+                <div class="card">
+                    <h1 class="horizontal">Nasa Space Apps 2022</h1>
+                    <p class="main-text">I participated in NASA Space Apps 2022 where my team and I decided to work on the project <a href="https://2022.spaceappschallenge.org/challenges/2022-challenges/twinkle-twinkle-little-star/teams/the-base/members" style="padding: 0px; font-weight: bold;">"Twinkle Twinkle Little Star"</a> and create the website "The Base". Our goal was to develop a website that makes learning about stars and the solar system engaging and enjoyable. We designed interactive games and collaborated with NASA to gather essential resources for the website's development. Through this project, we aimed to inspire curiosity and fascination with space exploration among learners of all ages.</p>
+                    <img src="./images/spaceAppsLogo.webp" alt="" width="55%"; style="place-self: center; margin-top: 10%;" >
+                </div>
+            </div>
+            <div id="target-olympiad" class="title title-olympiad ">
+                <h1 >Olympiads</h1>
+            </div>
+            <div id="content-grid" class="container flex">
+                <div class="card">
+                    <h1 class="horizontal">JBOI 2022</h1>
+                    <p class="main-text" >Participating in <a href="https://jboi2022.lrmd.ro/country" style="padding: 0px; font-weight: bold;" >"JBOI 2022"</a> was a wonderful experience. Not only did I gain valuable experience, but I also made lasting friendships that continue to this day. In addition to the problem-solving aspect of the Olympiad, there were various activities and trips planned to help us learn more about Romania. The Olympiad made me realize how much I have to learn to reach the level of other programmers my age. It also inspired me to further pursue my passion for programming and continuous learning.</p>
+                    <img src="./images/jboi logo.png" alt="" width="80%" style="place-self: center;margin-top: 10%;">
+                </div>
+            </div>
+            <div id="content-grid" class="container flex">
+                <div class="card">
+                    <h1 class="horizontal">JBOI 2023</h1>
+                    <p class="main-text" >At <a href="https://jboi2023.cs.org.mk/" style="padding: 0px; font-weight: bold;" >"JBOI 2023"</a> we had to participate online due to financial reasons. Although I missed the opportunity to make new friends in person, it was a valuable experience as it closely imitated the online working model. The virtual format taught me how to collaborate effectively with my team remotely. Additionally, it enhanced my ability to manage time and stay disciplined without the structure of an in-person event.</p>
+                    <img src="./images/jboi2023logo.png" alt="" width="55%"; style="place-self: center; margin-top: 10%;" >
+                </div>
+            </div>
+            <br><br><br><hr>
+            <div class="flex footer">
+                <h1>Contact</h1>
+                <br><br>
+                <div class="head-link flex">
+                    <a href="">LinkedIn</a>
+                    <a href="https://www.instagram.com/arber.zerani/">Instagram</a>
+                    <a href="">GitHub</a>
+                </div>
+            </div>
         </div>
     </div>
+    <script>
+        function toggleMenu() {
+        var x = document.querySelector(".nav-links");
+        var button = document.querySelector(".menu-toggle");
+        if (x.style.display === "flex") {
+            x.classList.remove("active"); 
+            setTimeout(function() {
+                x.style.display = "none"; 
+            }, 500); 
+            button.classList.remove("active"); 
+        } else {
+            x.style.display = "flex";
+            setTimeout(function() {
+                x.classList.add("active");
+            }, 100); 
+            button.classList.add("active"); 
+        }
+        }
+        </script>
 </body>
